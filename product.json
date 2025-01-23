@@ -1,0 +1,184 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Wireless Bluetooth Headphones",
+        "price": 79.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+        "description": "High-quality wireless headphones with noise-cancellation."
+      },
+      {
+        "id": 2,
+        "name": "Smartphone 12 Pro",
+        "price": 999.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1616410072514-e92114cf1a88",
+        "description": "The latest smartphone with cutting-edge features and a stunning display."
+      },
+      {
+        "id": 3,
+        "name": "Leather Office Chair",
+        "price": 199.99,
+        "category": "Furniture",
+        "availability": false,
+        "image": "https://images.unsplash.com/photo-1601335679963-10013d4578c9",
+        "description": "Ergonomically designed leather office chair for maximum comfort."
+      },
+      {
+        "id": 4,
+        "name": "4K Ultra HD Smart TV",
+        "price": 499.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6",
+        "description": "A large screen 4K smart TV with stunning picture quality."
+      },
+      {
+        "id": 5,
+        "name": "Running Shoes",
+        "price": 69.99,
+        "category": "Shoes",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2",
+        "description": "Lightweight and durable running shoes designed for comfort."
+      },
+      {
+        "id": 6,
+        "name": "Gaming Laptop",
+        "price": 1299.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1640695257754-7e2932f9ad0f",
+        "description": "Powerful gaming laptop with a high-refresh-rate display and fast processing power."
+      },
+      {
+        "id": 7,
+        "name": "Cotton T-Shirt",
+        "price": 19.99,
+        "category": "Clothing",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1484516396415-4971641de8e0",
+        "description": "Soft and breathable cotton t-shirt available in various colors."
+      },
+      {
+        "id": 8,
+        "name": "Wooden Coffee Table",
+        "price": 149.99,
+        "category": "Furniture",
+        "availability": false,
+        "image": "https://images.unsplash.com/photo-1515754940321-c1fa02475752",
+        "description": "Stylish wooden coffee table with a modern design."
+      },
+      {
+        "id": 9,
+        "name": "Noise-Cancelling Earbuds",
+        "price": 59.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df",
+        "description": "Compact noise-cancelling earbuds for on-the-go music lovers."
+      },
+      {
+        "id": 10,
+        "name": "Stainless Steel Water Bottle",
+        "price": 24.99,
+        "category": "Home & Kitchen",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1664714628878-9d2aa898b9e3",
+        "description": "Durable stainless steel water bottle that keeps liquids hot or cold for hours."
+      },
+      {
+        "id": 11,
+        "name": "Yoga Mat",
+        "price": 29.99,
+        "category": "Fitness",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f",
+        "description": "Non-slip yoga mat perfect for indoor and outdoor workouts."
+      },
+      {
+        "id": 12,
+        "name": "Electric Toothbrush",
+        "price": 49.99,
+        "category": "Personal Care",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1729514553007-54cc16e6986e",
+        "description": "Rechargeable electric toothbrush with multiple cleaning modes."
+      },
+      {
+        "id": 13,
+        "name": "Wireless Mouse",
+        "price": 29.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1707592691247-5c3a1c7ba0e3",
+        "description": "Ergonomic wireless mouse with long battery life."
+      },
+      {
+        "id": 14,
+        "name": "Portable Bluetooth Speaker",
+        "price": 39.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1608223652565-63abae6cf733",
+        "description": "Compact and powerful portable Bluetooth speaker with long battery life."
+      },
+      {
+        "id": 15,
+        "name": "Air Purifier",
+        "price": 149.99,
+        "category": "Home Appliances",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1634585605949-8f1e029af923",
+        "description": "HEPA air purifier to improve indoor air quality."
+      },
+      {
+        "id": 16,
+        "name": "Stainless Steel Cookware Set",
+        "price": 199.99,
+        "category": "Home & Kitchen",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1556910633-5099dc3971e8",
+        "description": "Durable and versatile stainless steel cookware set."
+      },
+      {
+        "id": 17,
+        "name": "Foldable Laptop Stand",
+        "price": 19.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://cdn.shopify.com/s/files/1/0565/1064/4324/files/adjustable-laptop-stand-holder-with-built-in-foldable-legs-classic-cooling-pads-silver-mounts-stands-grips-33510336036964_350x@2x.webp",
+        "description": "Portable and foldable laptop stand for ergonomic positioning."
+      },
+      {
+        "id": 18,
+        "name": "Wireless Charging Pad",
+        "price": 24.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1678733404598-d56e3d232483",
+        "description": "Fast wireless charging pad compatible with most devices."
+      },
+      {
+        "id": 19,
+        "name": "Smartwatch",
+        "price": 199.99,
+        "category": "Electronics",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1523395451704-22c6fb0522cf",
+        "description": "Feature-packed smartwatch with fitness tracking capabilities."
+      },
+      {
+        "id": 20,
+        "name": "Backpack",
+        "price": 49.99,
+        "category": "Accessories",
+        "availability": true,
+        "image": "https://images.unsplash.com/photo-1600019248002-f4c4898f739b",
+        "description": "Durable and spacious backpack for daily use."
+      }
+    ]
+  }

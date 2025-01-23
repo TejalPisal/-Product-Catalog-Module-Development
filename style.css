@@ -1,0 +1,175 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+/* Search container styling */
+.search-container {
+    position: relative;
+    margin-left: 10px;
+    width: 300px; /* Fixed width for search bar across all devices */
+    margin-right: 10px;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Adjust padding for the icon */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+}
+
+.suggestions-list {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Hamburger menu styling for mobile */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+}
+
+/* Mobile menu styling */
+.mobile-menu {
+    display: none;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    /* height: 100%; */
+    padding: 20px;
+    z-index: 100;
+}
+
+.mobile-menu.open {
+    display: block; /* Show mobile menu when open class is added */
+}
+
+.mobile-menu ul {
+    list-style: none;
+}
+
+.mobile-menu ul li {
+    padding: 10px 0;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Responsive adjustments for mobile and tablet */
+@media (max-width: 1024px) {
+    /* Hide regular navigation and show hamburger for mobile/tablet */
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Display hamburger menu for mobile/tablet */
+    }
+
+    /* Hide mobile menu by default */
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* For devices larger than 1024px (Desktops) */
+@media (min-width: 1024px) {
+    /* Display regular navigation on desktops and larger devices */
+    .nav-links {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide hamburger on desktops and larger screens */
+    }
+
+    /* Ensure mobile menu is not displayed on large devices */
+    .mobile-menu {
+        display: none;
+    }
+}
