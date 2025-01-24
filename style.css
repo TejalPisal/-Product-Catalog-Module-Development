@@ -20,7 +20,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px; 
+    padding: 15px 5px; 
+
     position: fixed;
     top: 0;
     left: 0;
@@ -38,9 +39,15 @@
   .logo img {
     width: 50px;
     height: 50px;
-    margin-right: 10px; 
+    margin-right: 5px; 
     border-radius: 50%;
     background-size: cover;
+  }
+
+  header .logo h1 {
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    margin: 0; 
   }
   
   /* Search container styling */
@@ -192,7 +199,7 @@
     align-items: center;
     gap: 20px;
     padding: 15px 30px; 
-    background-color: #ffffff; 
+    background-color: #fcf4f4; 
     position: fixed;
     top: 60px;
     left: 0;
@@ -510,15 +517,16 @@
   .cart-btn {
     background-color: #28a745;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 25px;
+    font-size: 1rem;
   }
   .cart-btn:hover {
     background-color: #45c163;
     transform: translateY(-2px);
   }
   
-  /* PAGINATION */
+  /* Pagination */
   .pagination {
     margin-top: 30px;
     text-align: center;
@@ -738,7 +746,7 @@
   .buy-btn {
     background-color: #ff6600;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
