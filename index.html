@@ -1,54 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Header with Search Bar</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Responsive Header with Hamburger Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
 </head>
 <body>
-
+  <!-- Main Header -->
   <header>
     <div class="logo">
-      <img src="images/logo.webp" alt="Product Logo" aria-label="Website Logo">
-      <h1 aria-label="MyStore Website Title">Shop</h1>
+      <img src="images/logo.webp" alt="Product Logo" aria-label="Website Logo" />
+      <h1 aria-label="Website Title">Shop</h1>
     </div>
 
     <!-- Search Bar -->
     <div class="search-container">
-        <input type="text" id="search-bar" placeholder="Search products..." aria-label="Search bar">
-        <i class="fas fa-search search-icon" aria-label="Search icon"></i> <!-- Font Awesome search icon -->
-        <ul id="suggestions" class="suggestions-list"></ul>
-    </div>      
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search products..."
+        aria-label="Search bar"
+      />
+      <i class="fas fa-search search-icon" aria-label="Search icon"></i>
+      <ul id="suggestions" class="suggestions-list" role="listbox"></ul>
+    </div>
 
     <!-- Desktop and Tablet Icons -->
     <nav>
       <ul class="nav-links">
-        <li><a href="#" aria-label="Home">Home</a></li>
-        <li><a href="#" aria-label="Products"> Products</a></li>
-        <li><a href="#" aria-label="Cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        <li><a href="#home" aria-label="Home">Home</a></li>
+        <li><a href="#products" aria-label="Products">Products</a></li>
+        <li>
+          <a href="#" id="cart-link" aria-label="Cart">
+            <i class="fas fa-shopping-cart"></i> Cart
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
+        </li>
       </ul>
-      <!-- Hamburger Icon for Mobile -->
-      <div class="hamburger-menu" aria-label="Menu">
+      <!-- Hamburger Button -->
+      <button 
+        class="hamburger-menu" 
+        aria-label="Toggle navigation" 
+        aria-controls="mobile-menu"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </nav>
   </header>
 
-  <div class="mobile-menu">
+  <!-- Filter Bar -->
+  <div class="filters-container">
+    <div class="filter-item">
+      <label for="filter-price-range">Price Range:</label>
+      <select id="filter-price-range">
+        <option value="all">All</option>
+        <option value="below500">Below 500</option>
+        <option value="500-2000">500 - 2000</option>
+        <option value="above2000">Above 2000</option>
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="filter-category">Category:</label>
+      <select id="filter-category">
+        <!-- Dynamic code -->
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="filter-sort-price">Sort by Price:</label>
+      <select id="filter-sort-price">
+        <option value="none">None</option>
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="filter-availability">Availability:</label>
+      <select id="filter-availability">
+        <option value="all">All</option>
+        <option value="in">In Stock</option>
+        <option value="out">Out of Stock</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-hidden="true">
     <ul>
-      <li><a href="#" aria-label="Home">Home</a></li>
-      <li><a href="#" aria-label="Products">Products</a></li>
-      <li><a href="#" aria-label="Cart"><i class="fas fa-shopping-cart"></i>Cart</a></li>
-      <!-- <li>
-        <input type="text" id="mobile-search-bar" placeholder="Search products..." aria-label="Search bar">
-        <ul id="mobile-suggestions" class="suggestions-list"></ul>
-      </li> -->
+      <li><a href="#home" aria-label="Home">Home</a></li>
+      <li><a href="#products" aria-label="Products">Products</a></li>
+      <li>
+        <a href="#" id="cart-link-mobile" aria-label="Cart">
+          <i class="fas fa-shopping-cart"></i> Cart
+          <span id="cart-count-mobile" class="cart-count">0</span>
+        </a>
+      </li>
     </ul>
   </div>
+
+  <!-- Main Containt -->
+  <main class="content-wrapper">
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+      <div class="home-overlay">
+        <h2>Welcome to Our Store</h2>
+        <p>Find the best products at unbeatable prices. Enjoy browsing through our wide variety!</p>
+        <a href="#products" class="btn-show-products">Show Products</a>
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <div id="products" class="products-wrapper">
+      <h2 class="products-heading">Our Products</h2>
+      <div id="products-container" class="products-grid"></div>
+      <div id="pagination" class="pagination"></div>
+    </div>
+  </main>
+
+  <!-- PRODUCT MODAL -->
+  <div 
+    id="product-modal" 
+    class="modal" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="modal-product-name"
+  >
+    <div class="modal-content">
+      <button id="modal-back-btn" class="modal-back-btn" aria-label="Close Product Modal">Back</button>
+      <div class="modal-product-img">
+        <img src="" alt="Product Image" id="modal-product-image" />
+      </div>
+      <h2 id="modal-product-name"></h2>
+      <p id="modal-product-description"></p>
+      <p id="modal-product-price"></p>
+      <p id="modal-product-availability"></p>
+      <p id="modal-product-category"></p>
+      <div class="modal-buttons">
+        <button id="modal-add-cart-btn" class="cart-btn">Add to Cart</button>
+        <button id="modal-buy-btn" class="buy-btn">Buy Product</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div 
+    id="cart-modal" 
+    class="modal" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="cart-modal-title"
+  >
+    <div class="modal-content cart-modal-content">
+      <button 
+        id="cart-modal-close-btn" 
+        class="modal-back-btn" 
+        aria-label="Close Cart Modal"
+      >
+        Close
+      </button>
+      <h2 id="cart-modal-title">Your Cart</h2>
+      <div id="cart-container" class="cart-grid"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-item">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        <span>+1 123-456-7890</span>
+      </div>
+      <div class="footer-item">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        <span>123 Main Street, Cityville</span>
+      </div>
+      <div class="footer-item">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span>info@example.com</span>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
